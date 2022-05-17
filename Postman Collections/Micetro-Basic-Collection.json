@@ -123,8 +123,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"dhcpScope\": {\r\n    \"name\": \"Branch 1 Closet\",\r\n    \"rangeRef\": \"192.168.100.0/24\",\r\n    \"dhcpServerRef\": \"WIN-51GK1SLM9V6.mmtest.net.\",\r\n    \"enabled\": true\r\n\r\n},\r\n\r\n\"saveComment\": \"New DHCP scope from Postman Collection\"\r\n\r\n}"
+				},
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes"
 			},
 			"response": []
 		},
