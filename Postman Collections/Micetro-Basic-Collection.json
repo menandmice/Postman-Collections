@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "Get DNS Record",
-			"_postman_id": "0aa8a0c0-bf8b-4386-a315-80ec261b3138",
+			"id": "0aa8a0c0-bf8b-4386-a315-80ec261b3138",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -16,10 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords/test-automation?dnsRecordRef=test-automation",
@@ -49,7 +46,7 @@
 		},
 		{
 			"name": "Get DNS Record w Params",
-			"_postman_id": "15012015-a36d-4190-aecf-2d1d4e5feadb",
+			"id": "15012015-a36d-4190-aecf-2d1d4e5feadb",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -58,10 +55,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords/get?dnsRecordRef=test-automation",
@@ -90,7 +84,7 @@
 		},
 		{
 			"name": "Get IPAM Information",
-			"_postman_id": "ec083e9c-7628-4a87-9883-78e4b43f48c9",
+			"id": "ec083e9c-7628-4a87-9883-78e4b43f48c9",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -119,6 +113,18 @@
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "41ac7804-b01f-4a82-b343-fed371e0f261",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
