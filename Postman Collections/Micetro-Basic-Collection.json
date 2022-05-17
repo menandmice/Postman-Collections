@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "12bebae2-2ed3-46c7-ba0a-6d830be8fb7c",
+		"name": "Micetro Basic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get DNS Record",
+			"_postman_id": "0aa8a0c0-bf8b-4386-a315-80ec261b3138",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords/test-automation?dnsRecordRef=test-automation",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"DNSRecords",
+						"test-automation"
+					],
+					"query": [
+						{
+							"key": "dnsRecordRef",
+							"value": "test-automation",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get DNS Record w Params",
+			"_postman_id": "15012015-a36d-4190-aecf-2d1d4e5feadb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords/get?dnsRecordRef=test-automation",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"DNSRecords",
+						"get"
+					],
+					"query": [
+						{
+							"key": "dnsRecordRef",
+							"value": "test-automation"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get IPAM Information",
+			"_postman_id": "ec083e9c-7628-4a87-9883-78e4b43f48c9",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/IPAMRecords/get?addrRef=10.13.0.10",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"IPAMRecords",
+						"get"
+					],
+					"query": [
+						{
+							"key": "addrRef",
+							"value": "10.13.0.10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "admin",
+			"username": "administrator"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "695af70a-a39b-47d0-91bc-b8f54318148f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b96d4dcc-c3ca-48d3-b2f9-cd58a30f6220",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
