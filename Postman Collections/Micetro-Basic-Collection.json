@@ -135,8 +135,13 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"properties\": {\r\n    \"owner\": \"Lauren\"\r\n  }\r\n}"
+				},
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DNSZones/micetroautomation.net."
 			},
 			"response": []
 		}
