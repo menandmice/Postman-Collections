@@ -151,7 +151,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Create New DNS Record",
 			"id": "a248a06f-495c-4740-9d1f-202eeec3891d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
