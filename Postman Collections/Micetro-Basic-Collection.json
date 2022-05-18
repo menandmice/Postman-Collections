@@ -168,7 +168,7 @@
 			"response": []
 		},
 		{
-			"name": "New Request",
+			"name": "Delete DNS Record",
 			"id": "a1daabc5-9db5-460c-a3b9-6cef6171f4bf",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
