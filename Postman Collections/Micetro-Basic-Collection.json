@@ -149,6 +149,18 @@
 				"url": "http://ddi.sm.mmdemo.net/mmws/api/DNSZones/micetroautomation.net."
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "a248a06f-495c-4740-9d1f-202eeec3891d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	],
 	"auth": {
