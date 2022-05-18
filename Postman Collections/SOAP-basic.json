@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "29352e76-806e-459d-a334-7281a8e9be8c",
+		"name": "Micetro SOAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://bs-web.dev.lab/mmws/api/v2/JSON/login",
+			"_postman_id": "304041bf-b1fc-412d-8f2e-c9c52f1ee7b4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"login\",\r\n    \"params\": {\r\n        \"server\": \"central name\",\r\n        \"loginName\": \"username\",\r\n        \"password\": \"passwrod\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://bs-web.dev.lab/mmws/api/v2/JSON/login"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"_postman_id": "2dd65df4-23d7-4717-bd22-e1a27c8ab894",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jsonrpc\": \"2.0\",\r\n    \"method\": \"login\",\r\n    \"params\": {\r\n        \"dhcpServer\": {\r\n            \"name\": \"servername\",\r\n            \"type\": \"servertype\",\r\n            \"dhcpv6\": true\r\n        }, \r\n        \"session\": \"dbxRklhtqajPXsFxjOGF\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://bs-web.dev.lab/mmws/api/v2/JSON/AddDHCPServer"
+			},
+			"response": []
+		}
+	]
+}
