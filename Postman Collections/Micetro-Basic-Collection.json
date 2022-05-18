@@ -134,6 +134,23 @@
 			"response": []
 		},
 		{
+			"name": "Create New DNS Record",
+			"id": "a248a06f-495c-4740-9d1f-202eeec3891d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dnsRecords\": [\r\n{\r\n      \"name\": \"web\",\r\n      \"type\": \"A\",\r\n      \"data\": \"10.13.0.12\"\r\n      \"dnsZoneRef\": \"DNSZones/71369\"\r\n}\r\n\r\n\r\n{\r\n      \"name\": \"db.micetroautomation.net\",\r\n      \"type\": \"A\",\r\n      \"data\": \"10.13.0.13\"\r\n      \"dnsZoneRef\": \"DNSZones/71369\"\r\n}\r\n]\r\n}"
+				},
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords"
+			},
+			"response": []
+		},
+		{
 			"name": "Add Custom Property to DNS Zone",
 			"id": "f63b403f-33e1-4a87-8dd8-7cdad2eb063f",
 			"protocolProfileBehavior": {
@@ -151,19 +168,14 @@
 			"response": []
 		},
 		{
-			"name": "Create New DNS Record",
-			"id": "a248a06f-495c-4740-9d1f-202eeec3891d",
+			"name": "New Request",
+			"id": "a1daabc5-9db5-460c-a3b9-6cef6171f4bf",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"dnsRecords\": [\r\n{\r\n      \"name\": \"web\",\r\n      \"type\": \"A\",\r\n      \"data\": \"10.13.0.12\"\r\n      \"dnsZoneRef\": \"DNSZones/71369\"\r\n}\r\n\r\n\r\n{\r\n      \"name\": \"db.micetroautomation.net\",\r\n      \"type\": \"A\",\r\n      \"data\": \"10.13.0.13\"\r\n      \"dnsZoneRef\": \"DNSZones/71369\"\r\n}\r\n]\r\n}"
-				},
-				"url": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords"
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
