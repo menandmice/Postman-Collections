@@ -174,8 +174,9 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DNSRecords/mail1.micetroautomation.net."
 			},
 			"response": []
 		}
