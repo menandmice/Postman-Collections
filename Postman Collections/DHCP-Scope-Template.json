@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "8f973cf7-111f-4a43-aa46-ae42ce0c9c72",
+		"name": "New DHCP Scope Template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET DHCP Server Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5d495b2d-865a-468c-bf76-c34a66189947",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "abc517c0-ffee-4d87-81a2-53bb235ea140",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPServers"
+			},
+			"response": []
+		},
+		{
+			"name": "New Range",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3677b284-98e8-4613-b63b-2a5b1d67ba43",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "7e280c6d-141b-4e2b-a475-1034f3621fba",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"range\": {\r\n\"name\": \"192.168.201.0/24\",\r\n\"customProperties\": {\r\n\"title\": \"Guest Wireless\",\r\n\"Data Center\": \"\"\r\n}\r\n},\r\n\"saveComment\": \"New range from Postman\"\r\n}\r\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/Ranges"
+			},
+			"response": []
+		},
+		{
+			"name": "Convert to DHCP Scope",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7bcc2eeb-d229-4682-bf0f-9f9c77f70e6b",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "5da57c1b-a734-452a-9b2e-9c2981c2da57",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dhcpScope\": {\r\n\"name\": \"Guest Wireless\",\r\n\"dhcpServerRef\": \"19\",\r\n\"rangeRef\": \"192.168.201.0/24\",\r\n\"enabled\": false\r\n},\r\n\"saveComment\": \"Convert to scope\"\r\n}\r\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes"
+			},
+			"response": []
+		},
+		{
+			"name": "Create DHCP Pool",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "16313847-518a-427a-a7bb-bd28053b21c9",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "23bfbcb8-eba1-421f-886a-cb84a05c6201",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dhcpAddressPool\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.200\"\r\n},\r\n\"saveComment\": \"Added pool for guest wireless\"\r\n}\r\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPAddressPools",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"DHCPScopes",
+						":dhcpScopeRef",
+						"DHCPAddressPools"
+					],
+					"variable": [
+						{
+							"key": "dhcpScopeRef",
+							"value": null,
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Exclusions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "02885bea-8db8-4f2e-bea9-8bb44e95d432",
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "d78db5ad-aad9-4329-9cad-3936d8187373",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"dhcpExclusion\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"name\": \"192.168.201.10-192.168.201.15\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.15\"\r\n},\r\n\"saveComment\": \"Exclusion range for routers and access points\"\r\n}\r\n",
+					"options": {
+						"raw": {}
+					}
+				},
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPExclusions",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"DHCPScopes",
+						":dhcpScopeRef",
+						"DHCPExclusions"
+					],
+					"variable": [
+						{
+							"key": "dhcpScopeRef",
+							"value": null,
+							"type": "any"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "admin",
+			"username": "administrator"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "674c7c5c-432d-41ed-a06f-cb87ce223ad6",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "474739e5-bc40-4fa5-a526-d4b91cbf4e12",
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"});"
+				]
+			}
+		}
+	]
+}
