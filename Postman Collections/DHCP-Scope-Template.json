@@ -21,7 +21,7 @@
 					}
 				}
 			],
-			"_postman_id": "abc517c0-ffee-4d87-81a2-53bb235ea140",
+			"id": "abc517c0-ffee-4d87-81a2-53bb235ea140",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -38,7 +38,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3677b284-98e8-4613-b63b-2a5b1d67ba43",
+						"id": "eb765e28-3983-47ac-8272-eda552e64f22",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
@@ -48,7 +48,7 @@
 					}
 				}
 			],
-			"_postman_id": "7e280c6d-141b-4e2b-a475-1034f3621fba",
+			"id": "7e280c6d-141b-4e2b-a475-1034f3621fba",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -57,9 +57,11 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"range\": {\r\n\"name\": \"192.168.201.0/24\",\r\n\"customProperties\": {\r\n\"title\": \"Guest Wireless\",\r\n\"Data Center\": \"\"\r\n}\r\n},\r\n\"saveComment\": \"New range from Postman\"\r\n}\r\n",
+					"raw": "{\r\n    \"range\": {\r\n        \"name\": \"192.168.201.0/24\",\r\n        \"customProperties\": {\r\n            \"title\": \"Guest Wireless\",\r\n            \"Data Center\": \"\"\r\n        }\r\n    },\r\n    \"saveComment\": \"New range from Postman\"\r\n}",
 					"options": {
-						"raw": {}
+						"raw": {
+							"language": "json"
+						}
 					}
 				},
 				"url": "http://ddi.sm.mmdemo.net/mmws/api/Ranges"
@@ -82,7 +84,7 @@
 					}
 				}
 			],
-			"_postman_id": "5da57c1b-a734-452a-9b2e-9c2981c2da57",
+			"id": "5da57c1b-a734-452a-9b2e-9c2981c2da57",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -91,10 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpScope\": {\r\n\"name\": \"Guest Wireless\",\r\n\"dhcpServerRef\": \"19\",\r\n\"rangeRef\": \"192.168.201.0/24\",\r\n\"enabled\": false\r\n},\r\n\"saveComment\": \"Convert to scope\"\r\n}\r\n",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\r\n\"dhcpScope\": {\r\n\"name\": \"Guest Wireless\",\r\n\"dhcpServerRef\": \"19\",\r\n\"rangeRef\": \"192.168.201.0/24\",\r\n\"enabled\": false\r\n},\r\n\"saveComment\": \"Convert to scope\"\r\n}\r\n"
 				},
 				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes"
 			},
@@ -116,7 +115,7 @@
 					}
 				}
 			],
-			"_postman_id": "23bfbcb8-eba1-421f-886a-cb84a05c6201",
+			"id": "23bfbcb8-eba1-421f-886a-cb84a05c6201",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -125,10 +124,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpAddressPool\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.200\"\r\n},\r\n\"saveComment\": \"Added pool for guest wireless\"\r\n}\r\n",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\r\n\"dhcpAddressPool\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.200\"\r\n},\r\n\"saveComment\": \"Added pool for guest wireless\"\r\n}\r\n"
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPAddressPools",
@@ -149,8 +145,7 @@
 					"variable": [
 						{
 							"key": "dhcpScopeRef",
-							"value": null,
-							"type": "any"
+							"value": null
 						}
 					]
 				}
@@ -173,7 +168,7 @@
 					}
 				}
 			],
-			"_postman_id": "d78db5ad-aad9-4329-9cad-3936d8187373",
+			"id": "d78db5ad-aad9-4329-9cad-3936d8187373",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -182,10 +177,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpExclusion\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"name\": \"192.168.201.10-192.168.201.15\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.15\"\r\n},\r\n\"saveComment\": \"Exclusion range for routers and access points\"\r\n}\r\n",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\r\n\"dhcpExclusion\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"name\": \"192.168.201.10-192.168.201.15\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.15\"\r\n},\r\n\"saveComment\": \"Exclusion range for routers and access points\"\r\n}\r\n"
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPExclusions",
@@ -206,8 +198,7 @@
 					"variable": [
 						{
 							"key": "dhcpScopeRef",
-							"value": null,
-							"type": "any"
+							"value": null
 						}
 					]
 				}
