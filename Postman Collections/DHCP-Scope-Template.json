@@ -129,7 +129,12 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpAddressPool\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.200\"\r\n},\r\n\"saveComment\": \"Added pool for guest wireless\"\r\n}\r\n"
+					"raw": "{\r\n    \"dhcpAddressPool\": {\r\n        \"dhcpScopeRef\": \"192.168.201.0/24\",\r\n        \"from\": \"192.168.201.10\",\r\n        \"to\": \"192.168.201.200\"\r\n    },\r\n    \"saveComment\": \"Added pool for guest wireless\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPAddressPools",
