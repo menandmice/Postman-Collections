@@ -93,7 +93,12 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpScope\": {\r\n\"name\": \"Guest Wireless\",\r\n\"dhcpServerRef\": \"19\",\r\n\"rangeRef\": \"192.168.201.0/24\",\r\n\"enabled\": false\r\n},\r\n\"saveComment\": \"Convert to scope\"\r\n}\r\n"
+					"raw": "{\r\n    \"dhcpScope\": {\r\n        \"name\": \"Guest Wireless\",\r\n        \"dhcpServerRef\": \"19\",\r\n        \"rangeRef\": \"192.168.201.0/24\",\r\n        \"enabled\": false\r\n    },\r\n    \"saveComment\": \"Convert to scope\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes"
 			},
