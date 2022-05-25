@@ -187,7 +187,12 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\"dhcpExclusion\": {\r\n\"dhcpScopeRef\": \"192.168.201.0/24\",\r\n\"name\": \"192.168.201.10-192.168.201.15\",\r\n\"from\": \"192.168.201.10\",\r\n\"to\": \"192.168.201.15\"\r\n},\r\n\"saveComment\": \"Exclusion range for routers and access points\"\r\n}\r\n"
+					"raw": "{\r\n    \"dhcpExclusion\": {\r\n        \"dhcpScopeRef\": \"192.168.201.0/24\",\r\n        \"name\": \"192.168.201.10-192.168.201.15\",\r\n        \"from\": \"192.168.201.10\",\r\n        \"to\": \"192.168.201.15\"\r\n    },\r\n    \"saveComment\": \"Exclusion range for routers and access points\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
 					"raw": "http://ddi.sm.mmdemo.net/mmws/api/DHCPScopes/:dhcpScopeRef/DHCPExclusions",
