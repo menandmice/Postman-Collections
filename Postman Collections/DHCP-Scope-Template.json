@@ -38,11 +38,13 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "eb765e28-3983-47ac-8272-eda552e64f22",
+						"id": "4a692e13-56b1-482b-9e9c-5165c19724d7",
 						"exec": [
 							"pm.test(\"Status code is 201\", function () {\r",
 							"    pm.response.to.have.status(201);\r",
-							"});"
+							"});\r",
+							"\r",
+							""
 						],
 						"type": "text/javascript"
 					}
