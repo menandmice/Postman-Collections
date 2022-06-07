@@ -28,6 +28,10 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPServers"
 			},
 			"response": []
