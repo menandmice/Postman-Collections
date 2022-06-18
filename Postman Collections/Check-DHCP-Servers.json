@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "565145ae-ef4e-4a98-a5c1-10a3993bb501",
+		"name": "Check DHCP Servers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find DHCP Servers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1526c66f-27f3-4ae9-bc70-30ce948ca91d",
+						"exec": [
+							"pm.test(\"DHCP service is OK\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"DHCP service is unreachable\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Unreachable\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"DHCP service is down\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"DHCP Service Down\");\r",
+							"});\r",
+							"\r",
+							"//Unknown -\tDHCP Server Controller status is unknown.\r",
+							"//OK -\tDHCP Server Controller and service are both OK.\r",
+							"//Unreachable -\tDHCP Server Controller is offline or otherwise unreachable.\r",
+							"//Out of date -\tDHCP Server Controller has a different version than Central.\r",
+							"//Updating -\tDHCP Server Controller version is being updated.\r",
+							"//Uninitialized -\tDHCP Server is on a uninitialized appliance that needs to be manually initialized.\r",
+							"//Detached -\tDHCP Server has been detached without removing it from the system.\r",
+							"//DHCP Service Down -\tDHCP Server service is down and DNS server is not responding to queries.\r",
+							"//DHCP Service Impaired -\tDHCP Server service is running but impaired."
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "838b9501-eef8-42b3-92af-3f1d46ac8b12",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/DHCPServers"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "admin",
+			"username": "administrator"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "070a87ff-c4dc-4d9a-8e03-fea49caf422f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c8ffb335-91ff-43f5-bf69-107bbcc72b7e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
