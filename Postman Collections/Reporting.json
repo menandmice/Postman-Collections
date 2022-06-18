@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "88a5d2f0-735d-474e-9977-079997ecaf03",
+		"name": "Reporting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get IP Range",
+			"_postman_id": "ef05c7dd-e8b5-4786-8924-ee723e3ca2e2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/Ranges/:rangeRef",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"Ranges",
+						":rangeRef"
+					],
+					"variable": [
+						{
+							"key": "rangeRef",
+							"value": "{{ref}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7a085de0-82d2-4944-a115-785cf4c1f355",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "c569582d-cd0e-488e-be05-e071cc79cd36",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/Ranges/:ref/Access",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"Ranges",
+						":ref",
+						"Access"
+					],
+					"variable": [
+						{
+							"key": "ref",
+							"value": "{{ref}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Used IPs for Range",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "69833cec-3a1c-4350-a9a8-051044d907f1",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "f7e28f1c-94bb-403f-b2a7-5fe55be46b06",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/Ranges/:rangeref/Statistics",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"Ranges",
+						":rangeref",
+						"Statistics"
+					],
+					"variable": [
+						{
+							"key": "rangeref",
+							"value": "{{ref}}",
+							"type": "string"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get IPAM Record",
+			"_postman_id": "bcb384da-134a-4e22-a672-8b4598cd2c9b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://ddi.sm.mmdemo.net/mmws/api/IPAMRecords/1.1.1.1?requireRangeRef={{ref}}",
+					"protocol": "http",
+					"host": [
+						"ddi",
+						"sm",
+						"mmdemo",
+						"net"
+					],
+					"path": [
+						"mmws",
+						"api",
+						"IPAMRecords",
+						"1.1.1.1"
+					],
+					"query": [
+						{
+							"key": "requireRangeRef",
+							"value": "{{ref}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ranges Dump",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e4f2dd64-9031-4ee4-ab76-7878941ff591",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"_postman_id": "4f3a6934-9f3a-4a75-98c2-2cf00dafa1a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://ddi.sm.mmdemo.net/mmws/api/Ranges"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": {
+			"password": "admin",
+			"username": "administrator"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b324b276-f793-4438-bcb5-34ffe7c81b97",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ed4fdff6-d407-4bfa-8008-b6b139ca055b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "11322980-2c78-4c57-bbb1-dbffdd0a5e7a",
+			"key": "ref",
+			"value": "2731",
+			"type": "string"
+		}
+	]
+}
