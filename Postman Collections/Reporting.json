@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "Get IP Range",
-			"_postman_id": "ef05c7dd-e8b5-4786-8924-ee723e3ca2e2",
+			"id": "ef05c7dd-e8b5-4786-8924-ee723e3ca2e2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -32,8 +32,7 @@
 					"variable": [
 						{
 							"key": "rangeRef",
-							"value": "{{ref}}",
-							"type": "string"
+							"value": "{{ref}}"
 						}
 					]
 				}
@@ -56,7 +55,7 @@
 					}
 				}
 			],
-			"_postman_id": "c569582d-cd0e-488e-be05-e071cc79cd36",
+			"id": "c569582d-cd0e-488e-be05-e071cc79cd36",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -82,8 +81,7 @@
 					"variable": [
 						{
 							"key": "ref",
-							"value": "{{ref}}",
-							"type": "string"
+							"value": "{{ref}}"
 						}
 					]
 				}
@@ -106,7 +104,7 @@
 					}
 				}
 			],
-			"_postman_id": "f7e28f1c-94bb-403f-b2a7-5fe55be46b06",
+			"id": "f7e28f1c-94bb-403f-b2a7-5fe55be46b06",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -132,8 +130,7 @@
 					"variable": [
 						{
 							"key": "rangeref",
-							"value": "{{ref}}",
-							"type": "string"
+							"value": "{{ref}}"
 						}
 					]
 				}
@@ -142,7 +139,7 @@
 		},
 		{
 			"name": "Get IPAM Record",
-			"_postman_id": "bcb384da-134a-4e22-a672-8b4598cd2c9b",
+			"id": "bcb384da-134a-4e22-a672-8b4598cd2c9b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -191,7 +188,7 @@
 					}
 				}
 			],
-			"_postman_id": "4f3a6934-9f3a-4a75-98c2-2cf00dafa1a0",
+			"id": "4f3a6934-9f3a-4a75-98c2-2cf00dafa1a0",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -214,7 +211,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "b324b276-f793-4438-bcb5-34ffe7c81b97",
+				"id": "3a1dc7bb-d2ed-48b6-a882-42e3c17d2b6b",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -224,7 +221,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "ed4fdff6-d407-4bfa-8008-b6b139ca055b",
+				"id": "6402ce4b-babc-443a-b901-685340884734",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -234,9 +231,9 @@
 	],
 	"variable": [
 		{
-			"id": "11322980-2c78-4c57-bbb1-dbffdd0a5e7a",
+			"id": "b8e69816-c94b-4dcf-a638-4b25f97be8f8",
 			"key": "ref",
-			"value": "2731",
+			"value": "73750",
 			"type": "string"
 		}
 	]
